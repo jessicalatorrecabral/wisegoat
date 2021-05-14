@@ -8,5 +8,8 @@
    Status do Projeto: Em desenvolvimento :warning:
    <p>Falta a parte funcional do site</p>
    
+   <h2>Gif e vídeo da página inicial do site</h2>
+   https://github.com/jessicalatorrecabral/wisegoat/issues/3#issue-892305886
+   
   
 
