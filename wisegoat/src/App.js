@@ -1,46 +1,17 @@
 import React from 'react'
 import styled, { keyframes }  from 'styled-components'
-
 import ConselhoBode from './components/ConselhoBode'
-import bodezinhoGuru from './assets/bodezinho.png'
+import GeradorConselho from './components/GeradorConselho'
 
 
-const BodeGuru = keyframes`
-0% {
-  transform: translatey(-30px)
-}
-50%{
-  transform: translatey(30px)
-}
-100%{
-  transform: translatey(-30px)
-}
-`
 const TelaPrincipal = styled.div`
 height: 100vh;
 display:flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
-`
-const Container = styled.div`
-height: 80vh;
-width: 30vw;
-display: flex;
-flex-direction: column;
-justify-content: center;
-`
-const Wise = styled.h2`
-color: #bdb6a4;
-width:20vw;
-font-size: 48px;
-margin-bottom: 0px;
-`
-const Goat = styled.h1`
-width:20vw;
-color: #720057;
-font-size: 120px;
-margin-bottom: 10px;
-margin-top: 0px;
+
+
 `
 const Button = styled.button`
 width: 20vw;
@@ -50,38 +21,60 @@ border-radius: 10px;
 font-size:26px;
 padding: 16px 22px;
 background-color: #72005f;
-margin-top: 55px;
+margin-top: -20px;
+margin-left: 23%;
+align-self: flex-start;
+&:hover{
+  cursor: pointer;
+  background-color: #8b3978;
+}
+
+
+
 
 `
-const Bode = styled.img`
-width: 25%;
-height:78vh;
-margin-bottom:100px;
-animation: ${BodeGuru};
-animation-duration: 2s;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-`
-function App() {
-  return (
+
+
+
+
+
+
+
+
+class App extends React.Component {
+
+  state={
+    pagina: 1
+    
+  }
+  renderizarPagina = () =>{
+    if(this.state.pagina === 1){
+      return <ConselhoBode/>
+    } 
+    if(this.state.pagina > 1){
+      return <GeradorConselho/>
+    }
+    
   
-    <TelaPrincipal>
-      <Container>
-        <Wise>
-          Wise
-        </Wise>
-        <Goat>
-          Goat
-        </Goat>
-      
-        <Button>Pedir conselho</Button>
-      
-      </Container>
-      <Bode src={bodezinhoGuru}></Bode>
+  }
+ 
+  trocarDePagina= () => {
     
-    </TelaPrincipal>
-    
+      this.setState({pagina: this.state.pagina + 1})
+      
+    }
+
+  
+  render(){
+  return (
+   <TelaPrincipal>
+     
+     {this.renderizarPagina()}
+     {this.state.pagina === 1 ? <Button onClick={this.trocarDePagina}>Pedir conselho</Button> : false}
+     
+   </TelaPrincipal>
   );
+  }
 }
 
 export default App;
