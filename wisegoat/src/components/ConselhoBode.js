@@ -1,7 +1,5 @@
-
 import React from 'react'
 import styled, { keyframes }  from 'styled-components'
-
 import bodezinhoGuru from '../assets/bodezinho.png'
 
 
@@ -26,19 +24,12 @@ margin-top: -80px;
 height: 60vh;
 
 `
-
-
-
-
-
 const Container = styled.div`
 margin-top: 0px;
 width: 30vw;
 display: flex;
 flex-direction: column;
 justify-content: center;
-
-
 
 `
 const Wise = styled.h2`
@@ -54,10 +45,6 @@ font-size: 120px;
 margin-bottom: 10px;
 margin-top: 0px;
 `
-
-
-
-
 const Bode = styled.img`
 width: 28%;
 height:75vh;
@@ -72,43 +59,24 @@ animation-timing-function: ease-in-out;
 animation-iteration-count: infinite;
 `
 
-
-
-
 class ConselhoBode extends React.Component {
 
-  
-
-   
    render(){
         return (
-         
-         
-    
-    <TelaBode>
-    <Container>
-      <Wise>
-        Wise
-      </Wise>
-      <Goat>
-        Goat
-      </Goat>
+          <TelaBode>
+            <Container>
+              <Wise>
+              Wise
+              </Wise>
+              <Goat>
+              Goat
+              </Goat>
+            </Container>
+            <Bode src={bodezinhoGuru}></Bode>
+          </TelaBode>
+     )
       
-     
-    
-    </Container>
-    <Bode src={bodezinhoGuru}></Bode>
-    </TelaBode>
-  
-  
-  
-        
-             )
-    
-    
+  }
 }
-}
-
-
 
 export default ConselhoBode

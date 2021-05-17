@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes }  from 'styled-components'
+import styled from 'styled-components'
 import ConselhoBode from './components/ConselhoBode'
 import GeradorConselho from './components/GeradorConselho'
 
@@ -10,8 +10,6 @@ display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-
-
 `
 const Button = styled.button`
 width: 20vw;
@@ -29,17 +27,7 @@ align-self: flex-start;
   background-color: #8b3978;
 }
 
-
-
-
 `
-
-
-
-
-
-
-
 
 class App extends React.Component {
 
@@ -55,12 +43,11 @@ class App extends React.Component {
       return <GeradorConselho/>
     }
     
-  
   }
  
-  trocarDePagina= () => {
-    
-      this.setState({pagina: this.state.pagina + 1})
+  trocarDePagina = () => {
+
+    this.setState({pagina: this.state.pagina + 1})
       
     }
 
