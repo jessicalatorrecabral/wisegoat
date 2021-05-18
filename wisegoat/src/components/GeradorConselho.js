@@ -29,6 +29,14 @@ border-radius: 10px;
 justify-content:space-between;
 background-color: #f2d9ff;
 align-items:center;
+
+
+@media(max-width: 767px){
+    width:100%;
+    margin:80px  auto;
+    
+   
+}
 `
 const Advice = styled.div`
 padding: 16px;
@@ -39,12 +47,30 @@ color: #720057;
 font-weight:bold;
 width: 60%;
 background-color: #f2d9ff;
+cursor: pointer;
+&:hover{
+    color:#9b316b;
+
+}
+
+
+@media(max-width: 767px){
+    font-size: 18px;
+    padding: 8px;
+    width:60%;
+    
+}
 `
 const Foto = styled.img`
 width:300px;
 height: 400px;
 border-radius: 10px;
 box-sizing:border-box;
+
+@media(max-width: 767px){
+    width:30%;
+    height:40%;
+}
 `
 export default class GeradorConselho extends React.Component{
 
@@ -52,16 +78,33 @@ export default class GeradorConselho extends React.Component{
             id: null,
             advice: ""
         }
-           
+   
+        
+       
+       
         
     async componentDidMount(){
-        const response = await api.get('')
+       const response = await api.get('')
         //console.log(response.data.slip.advice)
         this.setState({advice: response.data.slip.advice, id: response.data.slip.id}) 
 
+        
     }
+    NovoConselho=() =>{
+        
+        this.componentDidMount()
+        
+      
+     }
+    
+    
+    
     render(){
+        
+    
+    
        return(
+           
             <DivMaster>
                 <Titulo>
                     <H3>Wise</H3>
@@ -69,7 +112,7 @@ export default class GeradorConselho extends React.Component{
                 </Titulo>
                    
                 <MainDiv>
-                    <Advice>
+                    <Advice onClick={this.NovoConselho}>
                         <q> {this.state.advice}</q>
                         <p>Goat, Wise</p>
                     </Advice>

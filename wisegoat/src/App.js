@@ -10,7 +10,11 @@ display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
+
+
 `
+
 const Button = styled.button`
 width: 20vw;
 color: white;
@@ -24,7 +28,25 @@ margin-left: 23%;
 align-self: flex-start;
 &:hover{
   cursor: pointer;
-  background-color: #8b3978;
+  background-color: #8b3979;
+}
+@media(max-width: 420px){
+ width:60vw;
+ font-size:18px;
+ margin: 80px auto 10px auto;
+}
+
+@media(min-width: 421px) and (max-width: 620px){
+font-size: 20px;
+width:32vw;
+margin-top: -20px;
+margin-left: 15%;
+}
+@media(min-width: 621px) and (max-width: 720px){
+  width:30vw;
+  margin-left:20%;
+  font-size: 20px;
+  padding: 8px;
 }
 
 `
