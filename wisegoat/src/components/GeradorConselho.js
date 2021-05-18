@@ -30,6 +30,7 @@ justify-content:space-between;
 background-color: #f2d9ff;
 align-items:center;
 
+
 @media(max-width: 767px){
     width:100%;
     margin:80px  auto;
@@ -47,6 +48,11 @@ font-weight:bold;
 width: 60%;
 background-color: #f2d9ff;
 cursor: pointer;
+&:hover{
+    color:#9b316b;
+
+}
+
 
 @media(max-width: 767px){
     font-size: 18px;
@@ -73,18 +79,32 @@ export default class GeradorConselho extends React.Component{
             advice: ""
         }
    
-           
+        
+       
+       
         
     async componentDidMount(){
-        const response = await api.get('')
+       const response = await api.get('')
         //console.log(response.data.slip.advice)
         this.setState({advice: response.data.slip.advice, id: response.data.slip.id}) 
 
         
     }
+    NovoConselho=() =>{
+        
+        this.componentDidMount()
+        
+      
+     }
+    
+    
     
     render(){
+        
+    
+    
        return(
+           
             <DivMaster>
                 <Titulo>
                     <H3>Wise</H3>
@@ -92,7 +112,7 @@ export default class GeradorConselho extends React.Component{
                 </Titulo>
                    
                 <MainDiv>
-                    <Advice  >
+                    <Advice onClick={this.NovoConselho}>
                         <q> {this.state.advice}</q>
                         <p>Goat, Wise</p>
                     </Advice>

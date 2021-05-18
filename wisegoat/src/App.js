@@ -28,7 +28,7 @@ margin-left: 23%;
 align-self: flex-start;
 &:hover{
   cursor: pointer;
-  background-color: #8b3978;
+  background-color: #8b3979;
 }
 @media(max-width: 420px){
  width:60vw;
