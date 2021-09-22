@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import ConselhoBode from './components/ConselhoBode'
-import GeradorConselho from './components/GeradorConselho'
+import ConselhoBode from './pages/PaginaInicial/PaginaInicial'
+import GeradorConselho from './pages/PaginaDeConselhos/PaginaDeConselhos'
 
 
 const TelaPrincipal = styled.div`
