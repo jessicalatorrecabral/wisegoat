@@ -18,21 +18,24 @@ export const TelaPaginaInicial = styled.div`
     justify-content: center;
     margin-bottom: 0px;
     margin-top: -80px;
-    height: 60vh;
+    height: 100vh;
+    font-family: 'Roboto';
 
     @media(max-width: 420px){
         flex-direction: column;
         margin-top: 40px;
     }
-
 `
+
 export const Container = styled.div`
-    margin-top: 0px;
-    width: 30vw;
+    margin-top: 40px;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+    margin-right: 80px;
+    
     @media(max-width: 420px){
         margin-top:20px;
     }
@@ -77,8 +80,46 @@ export const Goat = styled.h1`
     }
 
 `
+
+export const Button = styled.button`
+    width: 60%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size:26px;
+    padding: 16px 22px;
+    background-color: #72005f;
+    margin-top: 40px;
+    align-self: center;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #8b3979;
+    }
+
+    @media(max-width: 420px) {
+        width:60vw;
+        font-size:18px;
+        margin: 80px auto 10px auto;
+    }
+
+    @media(min-width: 421px) and (max-width: 620px) {
+        font-size: 20px;
+        width:32vw;
+        margin-top: -20px;
+        margin-left: 15%;
+    }
+
+    @media(min-width: 621px) and (max-width: 720px) {
+        width:30vw;
+        margin-left:20%;
+        font-size: 20px;
+        padding: 8px;
+    }
+
+`
 export const BodeImagem = styled.img`
-    width: 28%;
+    width: 30%;
     height:75vh;
     margin-top:20%;
     justify-content: center;
