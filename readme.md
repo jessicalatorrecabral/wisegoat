@@ -26,6 +26,9 @@
    <ul>React.js
     <li>https://pt-br.reactjs.org/</li>
    </ul>
+   <ul>react-router-com
+    <li>https://www.npmjs.com/package/react-router-dom</li>
+   </ul>
    <ul>Como consumir APIs
     <li>https://celke.com.br/artigo/como-consumir-dados-da-api-com-react</li>
    </ul>
